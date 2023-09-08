@@ -1,0 +1,10 @@
+/* Descrição do projeto
+
+trabalhar com cartões na tela que irão se expandir ao clicar do mouse;
+
+usat estilos de css
+heading (cabeçalho)
+trabalhar flex box  para alinhamentos dos elementos
+(css transitions)
+
+trabalhar com JS para para retensão e expansão dos cards ao clicar do mouse , ativando uma classe  e desativando a anterior (event listener) */

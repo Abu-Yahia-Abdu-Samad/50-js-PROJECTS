@@ -1,0 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+*{ /* mudanças universais da pagina*/
+
+box-sizing: border-box; /* se mecher num elemento nao muda as medidas*/
+
+}
+body{
+ font-family: Roboto, sans-serif; /* mudei a fonte*/
+ display: flex; /* deixa os elemntos em linha*/
+ align-items: center; /* deixa elemntos no centro da tela*/
+ flex-direction: column; /* centralizei as colunas verticais*/ 
+ justify-content: center; /* centralizei horizontais*/  
+ margin: 0; /* zerei a margem*/
+ height: 100vh;
+ overflow: hidden; /* esconde as barras de movimentos*/ 
+}
+
+h1{
+ color: blue;
+
+}

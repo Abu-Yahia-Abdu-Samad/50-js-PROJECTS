@@ -1,0 +1,115 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;1,600&family=Oswald:wght@600&family=Roboto+Condensed:ital,wght@0,400;0,700;1,400&family=Roboto:wght@400;700&display=swap');
+
+:root{ /* criando variaveis no css*/ 
+
+--line-border-fill:  #3498db;
+--line-border-empty: #e0e0e0;
+
+}
+*{ /* mudanças universais da pagina*/
+
+box-sizing: border-box; /* se mecher num elemento nao muda as medidas*/
+
+}
+
+body{
+    background-color: #f6f7fb;
+ font-family: 'Oswald', sans-serif; /* mudei a fonte*/
+ display: flex; /* deixa os elemntos em linha*/
+ align-items: center; /* deixa elemntos no centro da tela*/
+ 
+ justify-content: center; /* centralizei horizontais*/  
+ margin: 0; /* zerei a margem*/
+ height: 100vh;
+ overflow: hidden; /* esconde as barras de movimentos*/ 
+}
+
+.container{ /*  elemento caixa geral*/ 
+
+text-align: center; /* elementos no centro da tela*/ 
+
+
+}
+.progress-container{ /*  elemento caixa secundaria*/ 
+    display: flex;  /* elementos em linha dentro do segundp cpntainer */
+    justify-content: space-between; /* separei os numeros */
+    position: relative;
+    margin-bottom: 35px;
+    max-width: 100%;
+    width: 420px;
+}
+
+.progress-container::before{ /*  elemento linha azul*/ 
+    content: ''; /* usou before ou after => usa content desta forma*/ 
+    background-color: var(--line-border-empty);
+ 
+    position: absolute; 
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    height: 5px;
+    width: 100%; /*  evolui junto com o botao*/ 
+    z-index: -1;
+  
+}
+.progress{ /*  elemento linha azul*/ 
+    background-color: var(--line-border-fill);
+ 
+    position: absolute; 
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    height: 5px;
+    width: 0%; /*  evolui junto com o botao*/ 
+    z-index: -1;
+    transition: 0.5s ease;
+}
+
+.circle{ /* estilizando os circulos*/ 
+
+background-color: #fff;
+color: #999;
+border-radius: 50%;
+height: 30px;
+width: 30px;
+display: flex;
+align-items: center;
+justify-content: center;
+border: 4px solid var(--line-border-empty); /* mesma cor da linha */ 
+transition: 0.4s ease;
+}
+
+.circle.active{
+
+border-color: var(--line-border-fill);
+
+}
+.btn{ 
+background-color: var(--line-border-fill);
+color: #f4f1f1;
+border: 0;
+border-radius: 5px;
+cursor: pointer;
+font-family: inherit;
+padding: 8px 30px;
+margin: 5px;
+font-size: 14px;
+}
+
+.btn:active{
+     
+    transform:scale(.98);
+    background-color: var(--line-border-fill)
+}
+.btn:focus{
+
+    outline: 0;
+}
+.btn:disabled{
+
+    background-color: var(--line-border-empty);
+    cursor:not-allowed;
+}
+
+
+

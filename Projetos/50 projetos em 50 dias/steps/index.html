@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <!--  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" referrerpolicy="no-referrer" />-->
+    <link rel="stylesheet" href="style.css"> 
+    <title>Steps</title>
+</head>
+<body>
+    <!-- envelopei os elemtos num container-->
+    <!-- melhor para estilizar-->
+    <div class="container">
+        <div class="progress-container"> <!-- aqui eu crio os steps -->
+          <div class="progress" id="progress"></div><!--crio a linha-->
+
+            <div class="circle active">1</div> <!--desativa no js-->
+            <div class="circle ">2</div> <!--troca a cor no js/css ativo-->
+            <div class="circle ">3</div>
+            <div class="circle ">4</div>
+            <div class="circle ">5</div>
+
+        </div>
+        <button class="btn " id="prev" disabled > Anterior </button>
+        <button class="btn " id="next" > Próximo </button>
+        <button class="btn " id="sav" disabled > Salvar </button>
+          <!--CRIEI UM BOTAO DE SALVAR E IMPLEMENTEI A LOGICA-->
+          <!--botao desativado/ começa no 1-->
+
+    </div>
+
+  
+    <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,64 @@
+@import url('https://fonts.googleapis.com/css2?family=Muli&display=swap');
+*{ /* mudanças universais da pagina*/
+
+box-sizing: border-box; /* se mecher num elemento nao muda as medidas*/
+
+}
+body{
+ font-family: 'Muli', sans-serif; /* mudei a fonte*/
+ display: flex; /* deixa os elemntos em linha*/
+ align-items: center; /* deixa elemntos no centro da tela*/
+ justify-content: center; /* centralizei horizontais*/  
+ margin: 0; /* zerei a margem*/
+ height: 100vh;
+ overflow: hidden; /* esconde as barras de movimentos*/ 
+}
+.container{  /* estilizando a  caixa envolta das divs*/ 
+ display: flex; /* elementos dentro da caixa na horizontal*/  /* se colocar flex direction colum fica uma em cima da outra*/ 
+ width: 90vw; /* elementos ocupam 90 % da largura */ 
+
+} 
+.panel{ /* estilizando os paines*/ 
+    background-size: auto 100%; /* deixa as imagens comk tamanho 100 % em seu espaço*/
+    background-position: center; /* centralizei as imagens de fundo*/  
+    background-repeat: no-repeat; /* apenas uma imagem de fundo, sem repetiçoes*/ 
+    height: 85vh; /* 85% da altura*/ 
+    border-radius: 52px; /* bordas arredondadas*/ 
+    color: #8744d4; /* cor do texto*/ 
+    cursor: pointer; /* mostra a maozinha quando passa em cima da imagem/ texto */ 
+    flex: 0.5; /* deixei todos do mesmo tamanho e largura* ajustamos o flex geral */
+    margin:10px; /* Seprei as colunas*/ 
+    position: relative; /* deixa espaço para mudar de posição*/
+    transition: flex 0.7s ease-in ; /* quando abrir a imagem o flex leva 0.7s para terminar*/ 
+
+    
+}
+
+.panel h3 { /* estilizando o texto dos parágrafos*/ 
+ font-size:  25px; /* tamanho da fonte em pixels*/ 
+ position: absolute; /* o texto nao sai deste lugar*/ 
+ bottom: 25px; /* posição no fundo da imagem, se colocar top fica em cima*/  
+ left: 20px; /* posição a esquerda da imagem, se colocar rigth fica a direita*/ 
+ margin: 0;
+ opacity: 0; /* o texto está invisivel, quando aticar o painel faz visivel*/ 
+}
+.panel.active{ /* estilo para o painel ativo*/ 
+ flex: 5;
+
+}
+.panel.active h3{ /* estilizando os P ativos*/ 
+opacity: 1; /* texto visivel / resetei o alpha*/ 
+transition: opacity 0.3s ease-in 0.3s;
+}
+
+@media (max-width:480){/* os estilos abaixo só para 480 ou menor*/ 
+  .container{
+  width: 100vw; /* visao total no celular*/ 
+   }
+
+   .panel:nth-of-type(5), 
+   .panel:nth-of-type(6){  /* esconde estes elementos no celular*/ 
+  display: none;
+    }
+
+}
