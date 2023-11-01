@@ -1,0 +1,143 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+*{ /* mudanças universais da pagina*/
+ margin: 0;
+ padding: 0;
+box-sizing: border-box; /* se mecher num elemento nao muda as medidas*/
+list-style:none ; 
+text-decoration: none;
+border: none;
+}
+body{
+ font-family: Roboto, sans-serif; /* mudei a fonte*/
+ 
+}
+html{
+
+    width: 100vw;
+    height: 100vh;
+    font-size: 62.5%;
+    overflow-x: hidden;
+   
+}
+
+/* menu*/
+
+header{
+    width: 100vw;
+    height: 70pix;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #1f1e1f;
+    position: fixed;
+    padding-left: 30rem;
+}
+.logo{
+    width:70pix;
+    height: auto;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    font-size: larger;
+}
+.logo h3{
+  padding-left: 1.0rem;
+    color: rgb(241, 185, 17);
+    font-size: 1.6rem;
+
+}
+.logo img{
+   width: 40%;
+    height: 100%;
+  align-content: space-between;
+
+}
+
+header .listmenu {
+
+    width: 600px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+header .listmenu li a{
+
+padding: 3rem 1rem 2rem 1rem ;
+color: azure;
+font-size: 1.8rem;
+text-transform: uppercase;
+font-weight: 500;
+transition: all 200ms ease-in;
+
+}
+header .listmenu li a:hover{
+  background-color: #3333;
+  border-bottom: 4px solid yellow;
+  color: yellow;
+   
+}
+
+
+.first{
+
+    height: 99vh;
+    background-image: linear-gradient(rgba(29,29,29,0.8 ), rgba(29,29,29,0.8)),url(./img/cover3.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+     background-size: cover; 
+     background-position-y: 50px ;  
+    width: 100vw;
+    display: flex;
+    flex-direction: column;  
+    justify-content: center;
+    align-items: center;
+  }
+  .first .conteudo1{
+
+    display: flex;
+    flex-direction: column;
+    align-items: center ;
+    justify-content: center;
+
+  }
+  .first  h1{
+
+    color: yellow;
+    font-size: 5rem;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+  }
+  .first  h2{
+
+    color: rgb(198, 198, 132);
+    font-size: 4rem;
+    text-transform: uppercase;
+    margin-bottom: 4rem;
+    
+  }
+
+.btn button{
+    width: 230px;
+    height: 60px;
+    cursor: pointer;
+    text-transform: uppercase;
+    background-color: yellow;
+    border-radius: 12px;
+    color: #101010;
+    font-weight: 770;
+    margin-top: 5rem;
+    transition: all 400ms ease-in;
+}
+
+.btn button:hover{
+ border: 3px solid yellowgreen;
+ background-color: transparent;
+ color: yellow;
+}
+.btn{
+
+    width: 480px;
+    display: flex;
+    justify-content: space-between;
+}
